@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quaf Registraion Form</title>
-  <!-- ✅ Google Font: Manrope -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <title>QUAF MEMBERSHIP REGISTRATION</title>
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body, html {
+    /* Animated gradient background */
+    body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Manrope', sans-serif;
+      padding: 40px 20px;
       background: linear-gradient(-45deg, #43cea2, #185a9d, #f7971e, #ffd200);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     @keyframes gradientBG {
@@ -29,29 +26,31 @@
       padding: 25px;
       border-radius: 12px;
       max-width: 500px;
-      width: 200%;
-      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
       text-align: center;
       color: #222;
       font-weight: 600;
+      margin-bottom: 20px;
     }
 
     label {
-      font-weight: 600;
       display: block;
+      margin-bottom: 8px;
       margin-top: 15px;
-      color: #333;
+      font-weight: 600;
     }
 
-    input, select, textarea {
+    input[type="text"],
+    input[type="email"],
+    select {
       width: 100%;
-      padding: 10px;
+      padding: 8px;
       margin-top: 5px;
       box-sizing: border-box;
-      font-family: 'Manrope', sans-serif;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
@@ -64,14 +63,13 @@
 
     input[type="submit"] {
       margin-top: 20px;
+      padding: 10px 20px;
       background-color: #185a9d;
       color: white;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
-      padding: 12px;
-      border-radius: 6px;
       font-weight: 600;
-      transition: background-color 0.3s;
     }
 
     input[type="submit"]:hover {
@@ -81,11 +79,11 @@
 </head>
 <body>
 
-  <form action="#" method="POST">
-    <h2>Quaf Registraion Form</h2>
+  <form action="submit_form.php" method="POST">
+    <h2>QUAF MEMBERSHIP REGISTRATION</h2>
 
-    <label for="admission">Admission Number:</label>
-    <input type="text" id="admission" name="admission" required>
+    <label for="admission_no">Admission No:</label>
+    <input type="text" id="admission_no" name="admission_no" required>
 
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
@@ -95,19 +93,20 @@
 
     <label for="class">Class :</label>
     <div class="checkbox-group">
-      <label><input type="checkbox" name="class[]" value="Class 6"> Class 1</label>
-      <label><input type="checkbox" name="class[]" value="Class 6"> Class 2</label>
-      <label><input type="checkbox" name="class[]" value="Class 6"> Class 3</label>
-      <label><input type="checkbox" name="class[]" value="Class 6"> Class 4</label>
-      <label><input type="checkbox" name="class[]" value="Class 6"> Class 5</label>
+      <label><input type="checkbox" name="class[]" value="Class 1"> Class 1</label>
+      <label><input type="checkbox" name="class[]" value="Class 2"> Class 2</label>
+      <label><input type="checkbox" name="class[]" value="Class 3"> Class 3</label>
+      <label><input type="checkbox" name="class[]" value="Class 4"> Class 4</label>
+      <label><input type="checkbox" name="class[]" value="Class 5"> Class 5</label>
       <label><input type="checkbox" name="class[]" value="Class 6"> Class 6</label>
       <label><input type="checkbox" name="class[]" value="Class 7"> Class 7</label>
       <label><input type="checkbox" name="class[]" value="Class 8"> Class 8</label>
       <label><input type="checkbox" name="class[]" value="Class 9"> Class 9</label>
       <label><input type="checkbox" name="class[]" value="Class 10"> Class 10</label>
-      <label><input type="checkbox" name="class[]" value="Class 10"> Class 11</label>
-      <label><input type="checkbox" name="class[]" value="Class 10"> Class 12</label>
+      <label><input type="checkbox" name="class[]" value="Class 11"> Class 11</label>
+      <label><input type="checkbox" name="class[]" value="Class 12"> Class 12</label>
     </div>
+
     <input type="submit" value="Submit">
   </form>
 
