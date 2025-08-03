@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seazon AI | Your Seasonal Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Side Navigation -->
+        <nav class="side-nav">
+            <div class="nav-header">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Seazon AI</span>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-comment"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-calendar"></i>
+                    <span>Seasonal Tips</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    <span>Recipes</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+            
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="assets/user-avatar.png" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="username">Alex Johnson</span>
+                    <span class="user-email">alex@example.com</span>
+                </div>
+                <button id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Seasonal Assistant</h1>
+                <div class="header-actions">
+                    <button id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="newChatBtn">
+                        <i class="fas fa-plus"></i> New Chat
+                    </button>
+                </div>
+            </header>
+            
+            <div class="chat-container">
+                <div class="chat-box" id="chatBox">
+                    <div class="welcome-message">
+                        <div class="ai-avatar">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="message-content">
+                            <h3>Welcome to Seazon AI!</h3>
+                            <p>I'm your seasonal assistant, here to help with recipes, gardening tips, and seasonal activities based on your location and preferences.</p>
+                            <div class="quick-actions">
+                                <button class="quick-btn" data-prompt="What's in season this month?">
+                                    <i class="fas fa-calendar-week"></i> Seasonal Produce
+                                </button>
+                                <button class="quick-btn" data-prompt="Suggest a summer recipe">
+                                    <i class="fas fa-utensils"></i> Recipe Ideas
+                                </button>
+                                <button class="quick-btn" data-prompt="Gardening tips for fall">
+                                    <i class="fas fa-seedling"></i> Gardening Tips
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <div class="input-area">
+                        <button id="attachBtn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <input type="text" id="userInput" placeholder="Ask Seazon AI about seasonal topics..." autocomplete="off">
+                        <button id="voiceButton">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span>Seazon AI is typing</span>
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
